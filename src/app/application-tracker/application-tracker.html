@@ -1,1 +1,15 @@
-<p>application-tracker works!</p>
+<h2>Application Tracker</h2>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Role</th>
+    <th>Status</th>
+  </tr>
+
+  <tr *ngFor="let app of applications">
+    <td>{{ app.company }}</td>
+    <td>{{ app.role }}</td>
+    <td>{{ app.status }}</td>
+  </tr>
+</table>

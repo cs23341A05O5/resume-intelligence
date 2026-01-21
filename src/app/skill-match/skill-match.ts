@@ -11,3 +11,4 @@ export class SkillMatch {
 
   missingSkills = ['Angular', 'TypeScript'];
 }
+export class SkillMatchComponent { }
