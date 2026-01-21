@@ -1,13 +1,19 @@
 <h2>Skill Match Report</h2>
 
-<p><strong>Match Score:</strong> 70%</p>
+<div *ngIf="resumeSkills.length === 0">
+  <p>Please upload and analyze a resume first.</p>
+</div>
 
-<h3>Matched Skills</h3>
-<ul>
-  <li *ngFor="let skill of matchedSkills">{{ skill }}</li>
-</ul>
+<div *ngIf="resumeSkills.length > 0">
+  <p><strong>Match Percentage:</strong> {{ matchPercentage }}%</p>
 
-<h3>Missing Skills</h3>
-<ul>
-  <li *ngFor="let skill of missingSkills">{{ skill }}</li>
-</ul>
+  <h3>Matched Skills</h3>
+  <ul>
+    <li *ngFor="let skill of matchedSkills">✅ {{ skill }}</li>
+  </ul>
+
+  <h3>Missing Skills</h3>
+  <ul>
+    <li *ngFor="let skill of missingSkills">❌ {{ skill }}</li>
+  </ul>
+</div>

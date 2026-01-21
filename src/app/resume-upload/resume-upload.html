@@ -1,9 +1,14 @@
 <h2>Upload Resume</h2>
 
-<p>Please upload your resume in PDF format.</p>
+<input
+  type="file"
+  accept=".pdf"
+  (change)="onFileSelected($event)"
+/>
 
-<input type="file" accept=".pdf" />
+<div *ngIf="selectedFile">
+  <p><strong>File Name:</strong> {{ selectedFile.name }}</p>
+  <p><strong>File Size:</strong> {{ selectedFile.size / 1024 | number:'1.0-2' }} KB</p>
 
-<br /><br />
-
-<button>Analyze Resume</button>
+  <button (click)="analyzeResume()">Analyze Resume</button>
+</div>

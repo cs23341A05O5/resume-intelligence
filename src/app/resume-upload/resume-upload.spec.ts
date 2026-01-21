@@ -1,20 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ResumeUploadComponent } from './resume-upload';
 
-import { ResumeUpload } from './resume-upload';
-
-describe('ResumeUpload', () => {
-  let component: ResumeUpload;
-  let fixture: ComponentFixture<ResumeUpload>;
+describe('ResumeUploadComponent', () => {
+  let component: ResumeUploadComponent;
+  let fixture: ComponentFixture<ResumeUploadComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ResumeUpload]
-    })
-    .compileComponents();
+      imports: [ResumeUploadComponent]
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(ResumeUpload);
+    fixture = TestBed.createComponent(ResumeUploadComponent);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {

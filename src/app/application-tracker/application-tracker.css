@@ -1,3 +1,13 @@
+input {
+  margin-right: 8px;
+  padding: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -6,8 +16,4 @@ table {
 th, td {
   border: 1px solid #ccc;
   padding: 8px;
-}
-
-th {
-  background-color: #f5f5f5;
 }

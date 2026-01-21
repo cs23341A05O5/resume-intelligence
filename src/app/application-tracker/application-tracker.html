@@ -1,15 +1,29 @@
 <h2>Application Tracker</h2>
 
+<h3>Add New Application</h3>
+
+<input placeholder="Company" [(ngModel)]="company" />
+<input placeholder="Role" [(ngModel)]="role" />
+<input placeholder="Status" [(ngModel)]="status" />
+
+<button (click)="addApplication()">Add</button>
+
+<hr />
+
 <table>
   <tr>
     <th>Company</th>
     <th>Role</th>
     <th>Status</th>
+    <th>Action</th>
   </tr>
 
-  <tr *ngFor="let app of applications">
+  <tr *ngFor="let app of applications; let i = index">
     <td>{{ app.company }}</td>
     <td>{{ app.role }}</td>
     <td>{{ app.status }}</td>
+    <td>
+      <button (click)="deleteApplication(i)">Delete</button>
+    </td>
   </tr>
 </table>
